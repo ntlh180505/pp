@@ -3,12 +3,15 @@ def input_something(args):
     return int(input(f"Enter the number of {args} in this class: "));
 
 # Ask the user to enter a list of info for an type
-def input_infos(args):
-    item = {}
-
-    # TODO: input info for the type (student/course info)
-
-    return item
+def stu_infos(args):
+    students = {} # 'students' = empty dictionary
+    n = number_of_students()
+    for _ in range(n):
+        student_id = input("Student ID: ")
+        name = input("Name: ")
+        dob = input("Date of Birth (DD/MM/YYYY): ")
+        students[student_id] = {'name': name, 'dob': dob} 
+    return students
 
 # Input the student mark in a course base on the course id
 def input_mark():
